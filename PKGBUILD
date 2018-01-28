@@ -4,7 +4,7 @@
 pkgbase=('monero-git')
 pkgname=('monero-git' 'libmonero-wallet-git')
 _gitname='monero'
-pkgver=0.11.1.0
+pkgver=0.11.1.0.r5471.6ed31485
 pkgrel=1
 arch=('x86_64' 'i686' 'armv7h' 'aarch64')
 url="https://getmonero.org/"
@@ -64,6 +64,7 @@ build() {
 	CMAKE_FLAGS+=" -DCMAKE_INSTALL_PREFIX=/usr "
 	CMAKE_FLAGS+=" -DBUILD_TESTS=OFF "
 	CMAKE_FLAGS+=" -DBUILD_GUI_DEPS=ON "
+  CMAKE_FLAGS+=" -DARCH=x86-64 "
 
 	# For OpenSSL v1.0
 	#CMAKE_FLAGS+=" -DOPENSSL_ROOT_DIR='/usr/include/openssl-1.0;/usr/lib/openssl-1.0 "
